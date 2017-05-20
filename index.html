@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highlight the Code</title>
+
+    <link href="node_modules/rainbow-code/themes/css/blackboard.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+    <pre><code data-language="javascript">
+function raceDemo()
+{
+    return Promise.race([
+        getEcho('Ala', 3),
+        getEcho('ma', 4),
+        getEcho('kota', 2)
+    ]).then(function(message)
+    {
+        document.querySelector('#race').innerHTML = `&lt;span style="color: blue;"&gt;${message}&lt;/span&gt;`
+    });
+}
+    </code></pre>
+
+    <script type="application/javascript" src="node_modules/rainbow-code/dist/rainbow.min.js"></script>
+    <script type="application/javascript" src="node_modules/rainbow-code/src/language/generic.js"></script>
+    <script type="application/javascript" src="node_modules/rainbow-code/src/language/javascript.js"></script>
+</body>
+</html>
