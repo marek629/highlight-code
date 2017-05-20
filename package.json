@@ -1,0 +1,27 @@
+{
+  "name": "highlight-code",
+  "version": "1.0.0",
+  "description": "Highlight the Code",
+  "main": "index.js",
+  "dependencies": {
+    "rainbow-code": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marek629/highlight-code.git"
+  },
+  "keywords": [
+    "highlight",
+    "rainbow"
+  ],
+  "author": "Marek Jędryka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marek629/highlight-code/issues"
+  },
+  "homepage": "https://github.com/marek629/highlight-code#readme"
+}
