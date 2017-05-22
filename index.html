@@ -22,9 +22,9 @@ function raceDemo()
     });
 }
         </code></pre>
-        <form>
+        <form class="form-inline" method="post">
             <div class="form-group">
-                <textarea id="code-input" cols="120" rows="30" placeholder="Source Code"></textarea>
+                <textarea id="code-input" name="code" cols="120" rows="30" placeholder="Source Code"></textarea>
             </div>
             <button type="submit">Highlight</button>
         </form>
@@ -33,5 +33,7 @@ function raceDemo()
     <script type="application/javascript" src="node_modules/rainbow-code/dist/rainbow.min.js"></script>
     <script type="application/javascript" src="node_modules/rainbow-code/src/language/generic.js"></script>
     <script type="application/javascript" src="node_modules/rainbow-code/src/language/javascript.js"></script>
+
+    <script type="application/javascript" src="src/js/FormController.js"></script>
 </body>
 </html>
