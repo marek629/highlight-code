@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Highlight the Code</title>
 
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
     <link href="node_modules/rainbow-code/themes/css/blackboard.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-    <pre><code data-language="javascript">
+    <div class="container">
+        <pre><code data-language="javascript">
 function raceDemo()
 {
     return Promise.race([
@@ -19,7 +21,14 @@ function raceDemo()
         document.querySelector('#race').innerHTML = `&lt;span style="color: blue;"&gt;${message}&lt;/span&gt;`
     });
 }
-    </code></pre>
+        </code></pre>
+        <form>
+            <div class="form-group">
+                <textarea id="code-input" cols="120" rows="30" placeholder="Source Code"></textarea>
+            </div>
+            <button type="submit">Highlight</button>
+        </form>
+    </div>
 
     <script type="application/javascript" src="node_modules/rainbow-code/dist/rainbow.min.js"></script>
     <script type="application/javascript" src="node_modules/rainbow-code/src/language/generic.js"></script>
