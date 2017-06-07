@@ -24,3 +24,21 @@ class FormController
 }
 
 const controller = new FormController(document.querySelector('form'));
+
+
+document.addEventListener('copy', function(e) {
+    let preElement = document.querySelector('pre');
+    let html = preElement.outerHTML;
+    let htmlString = new HtmlString(html);
+
+    console.log(e);
+    // e.clipboardData is initially empty, but we can set it to the
+    // data that we want copied onto the clipboard.
+    e.clipboardData.setData('text/plain', preElement.textContent);
+    e.clipboardData.setData('text/html', html);
+    e.clipboardData.setData('text/rtf', htmlString.toRichTextFormatString());
+
+    // This is necessary to prevent the current document selection from
+    // being written to the clipboard.
+    e.preventDefault();
+});
